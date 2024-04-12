@@ -41,7 +41,6 @@ def verify_access_token(token: str):
     return token_data
 
 
-import json
 def get_current_user(token : str = Depends(oauth2_scheme), db : Session = Depends(database.get_db)):
     token_data = verify_access_token(token)
     user = db.query(models.User).filter(models.User.id == token_data.id).first()
