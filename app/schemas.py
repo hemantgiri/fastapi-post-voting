@@ -4,6 +4,8 @@ from typing import Optional
 
 from pydantic.types import conint
 
+# *** class config is deprecated in pydantic 2 ***
+
 class PostBase(BaseModel):
     title: str
     content: str
@@ -18,9 +20,8 @@ class UserOut(BaseModel):
     email : EmailStr
     created_at : datetime
 
-    class Config:
+    class ConfigDict:
         from_attributes = True  
-
 
 
 
@@ -30,7 +31,7 @@ class Post(PostBase):
     owner_id : int
     owner : UserOut
 
-    class Config:
+    class ConfigDict:
         from_attributes = True
 
 
@@ -38,8 +39,8 @@ class PostOut(BaseModel):
     Post: Post
     votes: int
 
-    class Config:
-        orm_mode = True
+    class ConfigDict:
+        from_attributes = True
 
 class UserCreate(BaseModel):
     email : EmailStr

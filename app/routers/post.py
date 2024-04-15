@@ -8,7 +8,7 @@ from sqlalchemy import func
 
 router = APIRouter(tags=['posts'])
 
-@router.get("/posts", status_code=status.HTTP_201_CREATED,response_model=List[schemas.PostOut])
+@router.get("/posts", status_code=status.HTTP_200_OK,response_model=List[schemas.PostOut])
 def get_posts(limit: int = 10, skip : int = 0, search : Optional[str] = "" ,db : Session = Depends(get_db), current_user = Depends(oauth2.get_current_user)):
     # posts = db.query(models.Post).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()
     
