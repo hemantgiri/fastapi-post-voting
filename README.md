@@ -19,7 +19,7 @@ This project is a demonstration of a FastAPI application with PostgreSQL databas
 2. Clone this repository:
 
     ```bash
-    git clone https://github.com/yourusername/yourproject.git
+    git clone https://github.com/hemantgiri/fastapi-post-voting.git
     ```
 
 3. Navigate to the project directory:
@@ -32,13 +32,13 @@ This project is a demonstration of a FastAPI application with PostgreSQL databas
 
     ```plaintext
     DATABASE_HOSTNAME=localhost
-    DATABASE_PORT=
+    DATABASE_PORT=5432
     DATABASE_PASSWORD=
     DATABASE_NAME=
     DATABASE_USERNAME=
     SECRET_KEY=YOUR_SECRET_KEY_HERE
     ALGORITHM=HS256
-    ACCESS_TOKEN_EXPIRE_MINUTES=
+    ACCESS_TOKEN_EXPIRE_MINUTES=30
     ```
 
     - Replace `YOUR_SECRET_KEY_HERE` with a securely generated secret key. You can generate one using :
@@ -68,7 +68,7 @@ This project is a demonstration of a FastAPI application with PostgreSQL databas
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/yourusername/yourproject.git
+    git clone https://github.com/hemantgiri/fastapi-post-voting.git
     ```
 
 2. Navigate to the project directory:
@@ -99,13 +99,13 @@ This project is a demonstration of a FastAPI application with PostgreSQL databas
 
     ```plaintext
     DATABASE_HOSTNAME=localhost
-    DATABASE_PORT=
+    DATABASE_PORT=5432
     DATABASE_PASSWORD=
     DATABASE_NAME=
     DATABASE_USERNAME=
     SECRET_KEY=YOUR_SECRET_KEY_HERE
     ALGORITHM=HS256
-    ACCESS_TOKEN_EXPIRE_MINUTES=
+    ACCESS_TOKEN_EXPIRE_MINUTES=30
     ```
 
     - Replace `YOUR_SECRET_KEY_HERE` with a securely generated secret key. You can generate one using :
